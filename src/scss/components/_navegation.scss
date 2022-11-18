@@ -1,0 +1,11 @@
+.nav {
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	height: 100%;
+
+	&__link {
+		display: block;
+		flex: 1;
+	}
+}

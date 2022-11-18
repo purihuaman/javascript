@@ -1,0 +1,4 @@
+export const KEY_PUBLIC =
+	'pk_test_51KyFpMIfqdDeTL2bhOHPEAFZEtO1B4nsiyb5hojIHVswMaKDqQBXW82z9gDQ37NgMOkH3rsJ2eAShlS3zQVvU4kI003zO7IN8z';
+export const KEY_SECRET =
+	'sk_test_51KyFpMIfqdDeTL2blNf9p3uRS7NSJjkNaYbNM8uDPrpTwCVJimGhiUXmhyVFqYF16MJdvkS72dKdNmphstVYvPqe00uhjnXC21';

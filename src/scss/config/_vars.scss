@@ -1,0 +1,104 @@
+:root {
+	--screen: 1440px;
+
+	// TODO: ==> Padding <==
+	--s-padding: 0.5rem;
+	--n-padding: 1rem;
+	--l-padding: 1.5rem;
+	--x-padding: 2rem;
+
+	// TODO: ==> Margins <==
+	--s-margin: 0.5rem;
+	--n-margin: 1rem;
+	--l-margin: 1.5rem;
+	--x-margin: 2rem;
+
+	// TODO: ==> Gaps <==
+	--s-gap: 0.5rem;
+	--n-gap: 1rem;
+	--l-gap: 1.5rem;
+	--x-gap: 2rem;
+
+	// TODO: ==> Border Radius <==
+	--bradius: 0.4rem;
+	--bradius-second: 0.8rem;
+
+	// TODO: ==> Z-index <==
+	--z-back: -10;
+	--z-normal: 1;
+	--z-tooltip: 10;
+	--z-fixed: 100;
+	--z-modal: 1000;
+
+	// TODO: ==> Heights header <==
+	--header-height: 4rem;
+
+	// TODO: ==> Box-shadow <==
+	--shadow: 0 8px 8px 8px #23283710;
+	--shadow-all: 0 0 18px 10px #23283720;
+
+	// TODO: ==> Transitions <==
+	--transition: background-color 0.5s ease-in, color 0.4s, border-color 0.2s;
+	--transition-scale: transform 0.3s;
+	--transform-scale: scale(0.98);
+
+	// TODO: ==> Fonts <==
+	--heading-font: 'Quicksand', -apple-system, BlinkMacSystemFont, Segoe UI,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	--body-font: Mulish, 'Comic Neue', -apple-system, BlinkMacSystemFont, Segoe UI,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+	// TODO: ==> Font font-weight <==
+	--font-bold: bold;
+	--font-normal: normal;
+	--body-line-height: 1.5;
+}
+
+@font-face {
+	font-family: 'Comic Neue';
+	font-weight: normal;
+	src: url('/assets/fonts/ComicNeue-Regular.woff2');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	font-weight: bold;
+	src: url('/assets/fonts/Quicksand-Bold.woff2');
+	font-display: swap;
+}
+
+// TODO: ==> Breapoints <==
+
+$breakpoints: (
+	phones: 600px,
+	tablets: 768px,
+	laptops: 992px,
+	desktop: 1200px,
+	screen: 1440px,
+);
+
+// TODO: ==> Map button colors <==
+
+$button-colors: (
+	primary: var(--blue-500),
+	second: var(--purple-500),
+	danger: var(--red-500),
+);
+
+$button-hover: (
+	primary: var(--blue-600),
+	second: var(--purple-600),
+	danger: var(--red-600),
+);
+
+// TODO: ==> Map spaces <==
+$spacer: 1rem;
+$spacers: (
+	0: auto,
+	1: $spacer * 0.5,
+	2: $spacer,
+	3: $spacer * 1.5,
+	4: $spacer * 2,
+	5: $spacer * 2.5,
+);

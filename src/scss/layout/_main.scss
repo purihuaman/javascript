@@ -1,0 +1,9 @@
+.main {
+	padding: 0 var(--n-padding);
+	padding-bottom: var(--x-padding);
+
+	// @include querys(laptops) {
+	// 	grid-column: 1 / -1;
+	// 	grid-row: 2 / -1;
+	// }
+}

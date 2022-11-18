@@ -1,0 +1,44 @@
+.music {
+	padding: var(--x-padding) 0;
+
+	&__header {
+		padding: var(--n-padding) 0;
+		text-align: center;
+	}
+
+	&__form {
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: var(--x-padding);
+		background-color: var(--second-bg);
+		border-radius: var(--bradius);
+	}
+
+	&__field:not(:last-child) {
+		margin-bottom: var(--n-margin);
+	}
+
+	&__input {
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: var(--n-gap);
+
+		@include querys(laptops) {
+			flex-direction: row;
+		}
+	}
+
+	&__song {
+		flex: 1;
+		background-color: #faf;
+	}
+
+	&__artist {
+		flex: 1;
+		background-color: #fa0;
+	}
+}

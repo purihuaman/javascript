@@ -1,0 +1,148 @@
+// TODO: ==> Media querys <==
+
+@mixin querys($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+			@content;
+		}
+	} @else if type-of($breakpoint) == number and unit($breakpoint) == 'px' {
+		@media screen and (min-width: $breakpoint) {
+			@content;
+		}
+	} @else if type-of($breakpoint) == number and unit($breakpoint) == 'rem' {
+		@media screen and (min-width: $breakpoint) {
+			@content;
+		}
+	} @else if type-of($breakpoint) == number and unit($breakpoint) == 'em' {
+		@media screen and (min-width: $breakpoint) {
+			@content;
+		}
+	}
+}
+
+// TODO: ==> Buttons <==
+%button {
+	font-family: inherit;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+	white-space: nowrap;
+	border: none;
+	font-size: 1rem;
+	line-height: inherit;
+	padding: 0.5em 1em;
+	font-weight: inherit;
+	text-align: center;
+	border: 1px solid transparent;
+	color: var(--grey-200);
+	background-color: var(--grey-400);
+	transition: color 0.3s, background-color 0.4s, transform 0.3s;
+	border-radius: var(--bradius);
+	border-color: transparent;
+	cursor: pointer;
+}
+
+@mixin button {
+	@extend %button;
+
+	&:active {
+		transform: var(--transform-scale);
+	}
+
+	&:hover {
+		color: var(--grey-200);
+		background-color: var(--grey-500);
+	}
+
+	&::selection {
+		user-select: none;
+	}
+
+	&.disabled,
+	&:disabled {
+		opacity: 0.65;
+		pointer-events: none;
+	}
+}
+
+@mixin type-btn($colors, $hovers) {
+	@if length($colors) >= 1 and length($hovers) >=1 {
+		@for $i from 1 through length($colors) {
+			.btn-#{nth($colors, $i)} {
+				background-color: map-get($button-colors, nth($colors, $i));
+				border-color: map-get($button-colors, nth($colors, $i));
+
+				&:hover {
+					background-color: map-get($button-hover, nth($hovers, $i));
+					border-color: map-get($button-hover, nth($hovers, $i));
+					box-shadow: var(--shadow);
+				}
+			}
+			.btn-#{nth($colors, $i)}#{'-outline'} {
+				background-color: transparent;
+				color: map-get($button-colors, nth($colors, $i));
+				border-color: map-get($button-colors, nth($colors, $i));
+
+				&:hover {
+					background-color: map-get($button-hover, nth($hovers, $i));
+					border-color: map-get($button-hover, nth($hovers, $i));
+				}
+			}
+		}
+	}
+}
+
+// TODO: ==> Reset list <==
+
+@mixin reset-list {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+// TODO: ==> Map spaces <==
+
+@for $i from 0 through length($spacers) {
+	// FIXME: ==> Margins <==
+
+	.mg-all-#{$i} {
+		margin: map-get($spacers, $i);
+	}
+
+	.mg-bt-#{$i} {
+		margin-bottom: map-get($spacers, $i);
+	}
+
+	.mg-tp-#{$i} {
+		margin-top: map-get($spacers, $i);
+	}
+
+	.mg-lf-#{$i} {
+		margin-left: map-get($spacers, $i);
+	}
+	.mg-rg-#{$i} {
+		margin-right: map-get($spacers, $i);
+	}
+
+	// FIXME: ==> Paddings <==
+
+	.pd-all-#{$i} {
+		padding: map-get($spacers, $i);
+	}
+
+	.pd-bt-#{$i} {
+		padding-bottom: map-get($spacers, $i);
+	}
+
+	.pd-tp-#{$i} {
+		padding-top: map-get($spacers, $i);
+	}
+
+	.pd-lf-#{$i} {
+		padding-left: map-get($spacers, $i);
+	}
+	.pd-rg-#{$i} {
+		padding-right: map-get($spacers, $i);
+	}
+}

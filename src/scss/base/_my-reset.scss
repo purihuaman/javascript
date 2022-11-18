@@ -1,0 +1,84 @@
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+
+* {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+	font-size: 16px;
+	line-height: var(--body-line-height);
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+}
+
+img {
+	max-width: 100%;
+	border-style: none;
+	display: block;
+	width: 100%;
+	height: auto;
+	user-select: none;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: var(--link-color);
+}
+
+p {
+	margin: var(--n-margin) 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea,
+[type='text'],
+[type='email'],
+[type='password'],
+[type='number'],
+[type='search'],
+[type='date'],
+[type='datetime-local'],
+[type='tel'],
+[type='url'],
+select,
+textarea {
+	display: block;
+	width: 100%;
+	border: none;
+	padding: var(--s-padding) var(--n-padding);
+	margin: 0;
+	font-size: 98%;
+	font-weight: inherit;
+	font-family: inherit;
+	line-height: inherit;
+	color: var(--text-color);
+	transition: var(--transition);
+	background-color: var(--second-bg);
+	outline: 0;
+	border: 1px solid var(--border-color);
+	border-radius: var(--bradius);
+	box-shadow: var(--shadow);
+
+	&:focus,
+	&:active {
+		border-color: var(--primary-500);
+		background-color: var(--third-bg);
+	}
+
+	&::placeholder {
+		color: var(--grey-400);
+	}
+}

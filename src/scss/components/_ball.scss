@@ -1,0 +1,18 @@
+:root {
+	--translate: 0;
+}
+
+.container-ball {
+	min-height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ball {
+	width: 80px;
+	height: 80px;
+	transition: transform 0.3s;
+	border-radius: 50%;
+	background-color: var(--blue-500);
+}

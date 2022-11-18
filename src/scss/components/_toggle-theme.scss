@@ -1,0 +1,16 @@
+$size-toggle: 50px;
+
+.toggle-theme {
+	position: fixed;
+	bottom: 1rem;
+	left: 1rem;
+	z-index: 9999;
+	width: $size-toggle;
+	height: $size-toggle;
+	font-size: 2rem;
+	color: #ffcc00;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--second-bg);
+}

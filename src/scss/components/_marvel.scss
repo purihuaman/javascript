@@ -1,0 +1,25 @@
+.marvel {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1rem;
+	padding: 1rem;
+
+	& article {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 0.5rem;
+		padding: 1rem;
+		background-color: var(--second-bg);
+		text-align: center;
+		border-radius: 0.4rem;
+
+		& img {
+			display: block;
+			height: 280px;
+			object-fit: cover;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

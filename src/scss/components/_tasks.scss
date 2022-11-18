@@ -1,0 +1,36 @@
+.tasks {
+	background-color: var(--second-bg);
+	padding: var(--n-padding);
+	width: 100%;
+
+	&__container {
+		display: flex;
+		gap: var(--s-gap);
+		margin-top: var(--n-margin);
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__content {
+		min-height: 100px;
+		background-color: var(--first-bg);
+		padding: var(--n-padding) var(--s-padding);
+	}
+
+	&__task {
+		background-color: var(--primary-500);
+		padding: var(--s-padding);
+		border-radius: var(--bradius);
+		text-align: center;
+		margin-bottom: var(--s-margin);
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&.active {
+			background-color: var(--purple-500);
+		}
+	}
+}

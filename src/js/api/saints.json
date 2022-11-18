@@ -1,0 +1,31 @@
+{
+  "saints": [
+    {
+      "name": "ikki",
+      "constelation": "fenix",
+      "id": 1
+    }
+  ],
+  "dioses": [
+    {
+      "id": 1,
+      "name": "Athena",
+      "constelation": "Tierra"
+    },
+    {
+      "id": 2,
+      "name": "Poseidón",
+      "constelation": "Mar"
+    },
+    {
+      "id": 3,
+      "name": "Hades",
+      "constelation": "Inframundo"
+    },
+    {
+      "id": 4,
+      "name": "Zeus",
+      "constelation": "Cielo"
+    }
+  ]
+}

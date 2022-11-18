@@ -1,0 +1,65 @@
+$width-line: 28px;
+$height-line: 4px;
+$size-toggle: 50px;
+
+.toggle-icon {
+	width: $size-toggle;
+	height: $size-toggle;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	z-index: 99999;
+
+	@include querys(laptops) {
+		display: none;
+	}
+
+	&__line,
+	&__line::after,
+	&__line::before {
+		pointer-events: none;
+		height: $height-line;
+		background-color: var(--text-color);
+		border-radius: 0.4rem;
+	}
+
+	&__line {
+		position: relative;
+		width: 100%;
+
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			height: $height-line;
+			width: 75%;
+		}
+
+		&::before {
+			top: 0.8rem;
+		}
+
+		&::after {
+			bottom: 0.8rem;
+		}
+
+		&.close {
+			transition: transform, width, 0.5s;
+			transform: rotate(45deg);
+
+			&::after {
+				width: 100%;
+				top: 0;
+				transform: rotate(-90deg);
+			}
+
+			&::before {
+				width: 0;
+			}
+		}
+	}
+}

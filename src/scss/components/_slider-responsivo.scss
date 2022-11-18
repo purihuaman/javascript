@@ -1,0 +1,128 @@
+.slider-container {
+	position: relative;
+	width: 100%;
+}
+
+.slider {
+	position: relative;
+	height: 450px;
+	overflow: hidden;
+	// display: flex;
+
+	&__item {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: inherit;
+		height: inherit;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 1s ease;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem 0;
+		text-align: center;
+
+		&.current {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		& figure {
+			width: 100%;
+			height: 100%;
+		}
+
+		& img {
+			display: block;
+			height: inherit;
+			width: inherit;
+			object-fit: cover;
+		}
+	}
+}
+
+.arrows {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	pointer-events: none;
+
+	&__next,
+	&__previous {
+		width: auto;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		pointer-events: painted;
+		cursor: pointer;
+
+		transition: transform 0.3s;
+		user-select: none;
+
+		&:active {
+			transform: scale(0.88);
+		}
+
+		& span {
+			pointer-events: none;
+			width: 50px;
+			height: 50px;
+			display: inline-block;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid var(--blue-500);
+			border-radius: 50%;
+			background-color: var(--blue-900);
+		}
+		&:hover > span {
+			background-color: var(--blue-500);
+			border: 1px solid var(--blue-500);
+		}
+	}
+
+	&__previous {
+		// background-color: blue;
+	}
+
+	&__next {
+		// background-color: purple;
+	}
+}
+
+.points {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	padding-bottom: 0.5rem;
+
+	&__item {
+		display: block;
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+		border: 1px solid var(--text-color);
+		opacity: 0.4;
+
+		&.current {
+			opacity: 1;
+			background-color: var(--blue-500);
+			border-color: var(--blue-500);
+		}
+	}
+}

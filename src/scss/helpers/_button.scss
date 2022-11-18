@@ -1,0 +1,34 @@
+.btn {
+	@include button;
+}
+
+.boton {
+	display: inline-block;
+	width: 100%;
+	max-width: 23.75rem;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+	padding: 0.75em 1.5em;
+	font-size: 18px;
+	font-family: var(--body-font);
+	text-align: center;
+	line-height: inherit;
+	background-color: var(--primary-500);
+	user-select: none;
+	transition: background-color, transform, 1000ms;
+	transform: scale(1);
+	border-radius: var(--bradius);
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--primary-700);
+	}
+
+	&:active {
+		transform: scale(0.98);
+	}
+}
+
+@include type-btn(map-keys($button-colors), map-keys($button-hover));

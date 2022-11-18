@@ -1,0 +1,44 @@
+/* Estilos de scrool */
+
+$scroll-size: 8px;
+$track-bg: var(--second-bg);
+$thumb-bg: var(--primary-600);
+$thumb-hover: var(--primary-800);
+$scroll-radius: var(--bradius);
+$time-bg: .8s;
+
+*,
+html {
+	scrollbar-width: thin;
+
+	&::-webkit-scrollbar {
+		-webkit-appearance: none;
+	}
+
+	&::-webkit-scrollbar {
+		width: $scroll-size;
+		height: $scroll-size;
+	}
+
+	&::-webkit-scrollbar-track,
+	&::-webkit-scrollbar-corner {
+		background-color: $track-bg;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $thumb-bg;
+		border-radius: $scroll-radius;
+		transition: background-color $time-bg;
+
+		&:hover,
+		&:active {
+			background-color: $thumb-hover;
+		}
+	}
+
+	&::-webkit-scrollbar-button:increment,
+	&::-webkit-scrollbar-button {
+		display: none;
+	}
+
+}

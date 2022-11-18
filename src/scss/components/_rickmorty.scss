@@ -1,0 +1,118 @@
+.rickmorty {
+	position: relative;
+	&__content {
+		position: relative;
+	}
+
+	&__filters {
+		position: sticky;
+		top: var(--header-height);
+		z-index: var(--z-fixed);
+		padding: var(--n-padding);
+		padding-bottom: var(--x-padding);
+		background-color: var(--second-bg);
+		box-shadow: var(--shadow);
+		text-align: center;
+	}
+
+	&__characters {
+		padding-top: var(--x-padding);
+		flex: 1;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: var(--n-gap);
+	}
+
+	&__card {
+		background-color: var(--second-bg);
+		padding: var(--n-padding);
+		border-radius: var(--bradius);
+		display: flex;
+		min-width: 300px;
+		// flex-direction: column;
+	}
+
+	&__picture {
+		position: relative;
+		overflow: hidden;
+		width: 150px;
+		height: 100%;
+	}
+
+	&__image {
+		border-radius: var(--bradius);
+		width: 100%;
+		height: inherit;
+		object-fit: cover;
+	}
+
+	&__species {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		background-color: var(--grey-1000);
+	}
+
+	&__name {
+		text-align: center;
+	}
+
+	&__details {
+		flex: 1;
+		background-color: var(--third-bg);
+		padding: var(--s-padding) var(--n-padding);
+	}
+
+	&__text {
+		margin-top: 0;
+	}
+
+	&__status {
+		display: block;
+		// background-color: #faf;
+		border-radius: var(--bradius);
+		width: 80px;
+		text-align: center;
+
+		&.alive {
+			background-color: var(--green-500);
+		}
+		&.dead {
+			background-color: var(--red-500);
+		}
+		&.unknown {
+			background-color: var(--grey-400);
+		}
+	}
+
+	&__navegation {
+		padding: var(--x-padding) 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: var(--n-gap);
+	}
+
+	&__button {
+		font-size: 2rem;
+
+		&.disabled {
+			pointer-events: none;
+			opacity: 0.5;
+		}
+	}
+}
+
+.filters {
+	&__nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--n-gap);
+	}
+
+	&__item {
+		min-width: 100px;
+		flex: 1;
+	}
+}

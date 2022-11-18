@@ -1,0 +1,43 @@
+.products {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: var(--n-gap);
+	padding: var(--n-padding) 0;
+}
+
+.product {
+	padding: var(--n-padding);
+	border-radius: var(--bradius);
+	box-shadow: var(--shadow);
+	background-color: var(--second-bg);
+
+	&__picture {
+		min-height: 180px;
+		height: 200px;
+		overflow: hidden;
+		pointer-events: none;
+	}
+
+	&__image {
+		border-radius: var(--bradius);
+		object-fit: cover;
+		object-position: center;
+	}
+
+	&__name {
+		font-size: 1.5rem;
+		text-align: center;
+		margin-top: var(--s-margin);
+	}
+
+	&__content {
+		background-color: var(--third-bg);
+		padding: var(--n-padding);
+		pointer-events: none;
+	}
+
+	&__price {
+		font-weight: bold;
+		margin: 0;
+	}
+}

@@ -1,0 +1,20 @@
+.modal {
+	background-color: var(--grey-1000);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: var(--z-modal);
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__content {
+		padding: 0 var(--x-padding);
+		border-radius: var(--bradius);
+		text-align: center;
+		border: 1px solid;
+		border-color: inherit;
+	}
+}
