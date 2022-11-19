@@ -1,9 +1,12 @@
 import { dataType } from './datatype/datatype';
 import stringMethods from './strings/string-methods';
-import './practices/03exercise';
+import typeNumber from './numbers/type-number';
+
+import './practices/04exercise';
 
 window.addEventListener('DOMContentLoaded', (ev) => {
 	// console.clear();
 	// dataType();
 	// stringMethods();
+	// typeNumber();
 });
