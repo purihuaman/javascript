@@ -1,6 +1,8 @@
-import listMethods from './lists/list-methods';
+import { objDate } from './date/date';
+import { objects } from './objects/objects';
 
-import './practices/05exercise';
+import './practices/06exercise';
+// import './exercises/02exercise';
 
 window.addEventListener('DOMContentLoaded', (ev) => {
 	// console.clear();
@@ -8,4 +10,8 @@ window.addEventListener('DOMContentLoaded', (ev) => {
 	// stringMethods();
 	// typeNumber();
 	// listMethods();
+	// carrusel();
+	// sets();
+	// objects();
+	// objDate();
 });
