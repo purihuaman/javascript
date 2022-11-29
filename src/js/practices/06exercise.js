@@ -1,4 +1,4 @@
-const familyMembers = ['Yalud', 'Leticia', 'Vane', 'Yoli'];
+const familyMembers = ['Silvia', 'Yalud', 'Leticia', 'Vane', 'Nayeli'];
 const arrays = new Set(familyMembers);
 
 arrays.add('Pedro');
