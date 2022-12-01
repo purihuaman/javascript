@@ -1,7 +1,4 @@
-import { objDate } from './date/date';
-import { objects } from './objects/objects';
-
-import './practices/09exercise';
+import './practices/10exercise';
 // import './exercises/02exercise';
 
 window.addEventListener('DOMContentLoaded', (ev) => {
@@ -14,4 +11,9 @@ window.addEventListener('DOMContentLoaded', (ev) => {
 	// sets();
 	// objects();
 	// objDate();
+	// NOTE: funciones
+	// functions();
+	// promises();
+	// NOTE: Funciones generadoras
+	// generatingFunctions();
 });
